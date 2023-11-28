@@ -62,6 +62,7 @@ function writeToDocument(url) {
 			tableRows.push(`<tr>${dataRow}</tr>`);
 		});
 
-		el.innerHTML = `<table>${tableHeaders}${tableRows}</table>${pagination}`; // Creating table
+		el.innerHTML =
+			`<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g); // Creating table / = replace g = all instances of comma
 	});
 } // prints [object] to screen
