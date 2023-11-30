@@ -63,6 +63,9 @@ function writeToDocument(url) {
 		});
 
 		el.innerHTML =
-			`<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(/,/g); // Creating table / = replace g = all instances of comma
+			`<table>${tableHeaders}${tableRows}</table>${pagination}`.replace(
+				/,/g,
+				" "
+			); // Creating table, / = replace, g = all instances of comma
 	});
 } // prints [object] to screen
